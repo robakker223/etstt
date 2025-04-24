@@ -96,6 +96,11 @@
         <span>👨</span> → <span>Notary A</span> → <span>Notary B</span> → <span>🏡 Seller</span>
       </div>
     </div>
+    <div class="section">
+      <h4>Join a Move Chain</h4>
+      <p>We’ll link your sale and next purchase, or match you with a first-time buyer. This guarantees you a path forward and helps others get in.</p>
+      <button onclick="alert('You’ve joined a Move Chain — we’ll coordinate your transaction with other verified sellers and buyers.')">Find Your Chain</button>
+    </div>
     <button onclick="alert('Linked Transfer Confirmed!')">Confirm & Secure Linked Transfer</button>
   </div>
 
@@ -112,9 +117,10 @@
 
       const equity = sale + cash;
       const remaining = purchase - equity;
+      const savingsUsed = cash;
 
       document.getElementById('result').style.display = 'block';
-      document.getElementById('result').innerText = `Available equity: €${equity.toLocaleString()}\nRemaining amount to finance: €${remaining > 0 ? remaining.toLocaleString() : 0}`;
+      document.getElementById('result').innerText = `Available equity: €${equity.toLocaleString()}\nRemaining amount to finance: €${remaining > 0 ? remaining.toLocaleString() : 0}\nCash savings used: €${savingsUsed.toLocaleString()}`;
     }
   </script>
 </body>
